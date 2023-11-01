@@ -1,11 +1,7 @@
-import * as React from 'react';
+import { getAllMenu } from "@/server";
+import * as React from "react";
 
 export default function Sidebar() {
-  return (
-    <div className="mr-2">
-      <div>
-        <form action="" method="post"></form>
-      </div>
-    </div>
-  );
+  getAllMenu().then((a) => console.log(a));
+  return <div className="mr-2">Sidebar</div>;
 }
